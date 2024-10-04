@@ -10,6 +10,7 @@
     <nav>
         <ul class ='sidebar'>
             <li class="lista" onclick = hideSideBar()><a href="#">X</a></li>
+            <li class="lista"><a href="#"><i><img class="carrito" src="./media/carrito-de-compras.png" alt="Ir Al Carrito"></i></a></li>
             <li class="lista"><a href="#">Salones</a></li>
             <li class="lista"><a href="#">Auxiliares</a></li>
             <li class="lista"><a href="#">Dormitorios</a></li>
@@ -17,6 +18,7 @@
             <li class="lista"><a href="#">Gaming</a></li>
             <li class="lista"><a href="#">Sofas y Relax</a></li>
             <li class="lista"><a href="#">Ofertas</a></li>
+            <li class="lista"><a href="#">Log In</a></li>
         </ul>
         <ul>
             <li ><img src="./media/logoMobel.png" alt="" class="logo"></li>
@@ -43,8 +45,11 @@
                         <div class="descripcion">
                             <p>Sillón mod.akua</p>
                             <p class="marroncito">56,00€</p>
-                            <button>VER PRODUCTO</button>                           </button>
+                            <button>VER PRODUCTO</button>
                         </div>
+                        <Button class="showMore marroncito">
+                            SHOW MORE
+                        </Button>
                     </div>
                 </div>
                 <div class="diapositiva">
@@ -53,7 +58,7 @@
                         <div class="descripcion">
                             <p>Sillón mod.arbol</p>
                             <p class="marroncito">100,00€</p>
-                            <button>VER PRODUCTO</button>                           </button>
+                            <button>VER PRODUCTO</button>                           
                         </div>
                     </div>
                 </div>
@@ -63,13 +68,17 @@
                         <div class="descripcion">
                             <p>Sillón mod.Nova tapizado</p>
                             <p class="marroncito">120,00€</p>
-                            <button>VER PRODUCTO</button>                           </button>
+                            <button>VER PRODUCTO</button>
                         </div>
                     </div>
                 </div>
                 <button class="arrow right" onclick="plusSlides(1)">&#10095;</button>
+
             </div>
+            
         </div>
+
+        
         
     </div>
 
@@ -90,14 +99,36 @@
         <br>
         <p>Suscríbete y obtén 20€ de descuento en comprar superiores a 200€</p>
         <br>
-        <input type="text" placeholder="Tu email">
-        <button>Suscribirse</button>
+        <div class="suscribe">
+            <input type="text" placeholder="Tu email">
+            <button onclick="suscrito()">Suscribirse</button>
+        </div>
+        
         <br>
         <input type="checkbox">Acepto los Terminos y condiciones (esto sería un link)
 
     </div>
 
-    <footer></footer>
+    <footer>
+        <div class="about">
+            <h3>Contacto</h3>
+            <p>WhatsApp: +34 604 177 455</p>
+            <br>
+            <p>SHOWROOM MADRID: C. Módena, 24, 28232 Las Rozas de Madrid, Madrid</p>
+        </div>
+        <div class="separador"></div>
+        <div class="social">
+            <h3>Y también en redes</h3>
+            <br>
+            <p class="marroncito">Instagram</p>
+            <br>
+            <p class="marroncito">Facebook</p>
+            <br>
+            <p class="marroncito">TikTok</p>
+            <br>
+            <p class="marroncito">Reddit</p>            
+        </div>
+    </footer>
 
     <script src="./scripts.js"></script>
 </body>

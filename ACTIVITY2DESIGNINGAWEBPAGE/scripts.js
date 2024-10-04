@@ -33,3 +33,8 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+
+function suscrito(){
+  alert('Gracias por dejar que te demos la chapa');
+}
