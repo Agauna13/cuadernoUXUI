@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class ='sidebar'>
+            <li class="lista" onclick = hideSideBar()><a href="#">X</a></li>
+            <li class="lista"><a href="#">Salones</a></li>
+            <li class="lista"><a href="#">Auxiliares</a></li>
+            <li class="lista"><a href="#">Dormitorios</a></li>
+            <li class="lista"><a href="#">Descanso</a></li>
+            <li class="lista"><a href="#">Gaming</a></li>
+            <li class="lista"><a href="#">Sofas y Relax</a></li>
+            <li class="lista"><a href="#">Ofertas</a></li>
+        </ul>
+        <ul>
+            <li ><img src="./media/logoMobel.png" alt="" class="logo"></li>
+            <li class='hideOnMobile'><a href="#">Salones</a></li>
+            <li class='hideOnMobile'><a href="#">Auxiliares</a></li>
+            <li class='hideOnMobile'><a href="#">Dormitorios</a></li>
+            <li class='hideOnMobile'><a href="#">Descanso</a></li>
+            <li class='hideOnMobile'><a href="#">Gaming</a></li>
+            <li class='hideOnMobile'><a href="#">Sofas y Relax</a></li>
+            <li class='hideOnMobile'><a href="#">Ofertas</a></li>
+            <li class = 'menuButton' onclick=showSideBar()><button class="menuButton">Menu</button> </li>
+        </ul>
+    </nav>
+
+    <div class="bienvenida">
+        <h2>Bienvenidos a Mobel Store</h2>
+        <div class="carrusel">
+            <h2 class="marroncito">SILLAS</h2>
+            <div class="contenedor">
+                <button class="arrow left" onclick="plusSlides(-1)">&#10094;</button>
+                <div class="diapositiva">
+                    <div class="producto">
+                        <img src="./media/sillon1.webp" alt="sillon1">
+                        <div class="descripcion">
+                            <p>Sillón mod.akua</p>
+                            <p class="marroncito">56,00€</p>
+                            <button>VER PRODUCTO</button>                           </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="diapositiva">
+                    <div class="producto">
+                        <img src="./media/sillon2.webp" alt="sillon1">
+                        <div class="descripcion">
+                            <p>Sillón mod.arbol</p>
+                            <p class="marroncito">100,00€</p>
+                            <button>VER PRODUCTO</button>                           </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="diapositiva">
+                    <div class="producto">
+                        <img src="./media/sillon3.webp" alt="sillon1">
+                        <div class="descripcion">
+                            <p>Sillón mod.Nova tapizado</p>
+                            <p class="marroncito">120,00€</p>
+                            <button>VER PRODUCTO</button>                           </button>
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow right" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="blog">
+        <h2>Ideas para tu hogar</h2>
+        <p>Aqui encontrarás ideas novedosas para decorar y amueblar tu hogar</p>
+        <button>Leer más</button>
+    </div>
+
+    <div class="mapa">
+        <h2 class="marroncito">NUESTRAS TIENDAS</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.6273760401496!2d2.664517175439357!3d39.568008806858515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129793b01716a01b%3A0x55bc574de040df4a!2sCIFP%20Francesc%20de%20Borja%20Moll!5e0!3m2!1ses!2ses!4v1728013321252!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>Encuentra tu tienda más cercana</p>
+    </div>
+
+    <div class="newsletter">
+        <h3>Newsletter</h3>
+        <br>
+        <p>Suscríbete y obtén 20€ de descuento en comprar superiores a 200€</p>
+        <br>
+        <input type="text" placeholder="Tu email">
+        <button>Suscribirse</button>
+        <br>
+        <input type="checkbox">Acepto los Terminos y condiciones (esto sería un link)
+
+    </div>
+
+    <footer></footer>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
