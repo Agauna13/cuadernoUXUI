@@ -33,6 +33,7 @@ nav{
     display: grid;
     grid-template-columns: repeat(4, 100px);
     height: 50px;
+    cursor: pointer;
 }
 
 nav a{
@@ -41,7 +42,6 @@ nav a{
     color: white;
     background-color: rgb(110, 62, 155);
     text-align: center;
-    /*text-justify: center;*/
     font-size: 1.5rem;
     padding: 10%;
 }
