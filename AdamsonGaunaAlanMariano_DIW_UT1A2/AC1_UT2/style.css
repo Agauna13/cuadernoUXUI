@@ -80,7 +80,7 @@ nav a{
 
 .tabla{
     display: grid;
-    grid-template-rows: 30px repeat(4fr);
+    grid-template-rows: repeat(5 1fr);
     width: 450px;
     height: 200px;
     border: solid 1px rgb(98, 92, 92);
