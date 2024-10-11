@@ -46,6 +46,7 @@ img#model {
 
   left: 30px;
   top: 25px;
+  width: fit-content;
  
 }
 
@@ -68,5 +69,6 @@ img#scissors {
 /* CSS BELOW */
   top: -60px;
   left: 10px;
+  width: fit-content;
 
 }
