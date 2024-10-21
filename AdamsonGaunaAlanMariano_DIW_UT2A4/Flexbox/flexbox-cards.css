@@ -1,6 +1,10 @@
 .cards {
     /*************  ADD YOUR CODE HERE ************/
-
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-between;
+    width: 100%;
     /************** END OF YOUR CODE ***************/
 }
 
@@ -10,13 +14,20 @@
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     padding:5px;
     /*************  ADD YOUR CODE HERE ************/
-
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    max-width: 200px;
+    text-wrap: wrap;
     /************** END OF YOUR CODE ***************/
 }
 
 .card img {
     /*************  ADD YOUR CODE HERE ************/
-
+    display: flex;
+    align-self: flex-start;
+    width: 100%;
     /************** END OF YOUR CODE ***************/
 }
 
@@ -29,6 +40,11 @@
     border: 0;
     color: white;
     /*************  ADD YOUR CODE HERE ************/
-
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    height: 30px;
+    
     /************** END OF YOUR CODE ***************/
 }
