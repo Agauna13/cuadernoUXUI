@@ -39,7 +39,6 @@ nav > div > a {
   font-size: 1.2em;
   color: white;
 }
-
 nav > div:hover {
   cursor: pointer;
 }
@@ -58,8 +57,10 @@ nav > div:hover a {
 
 #contents {
   /********** ADD YOUR CODE HERE ***********/
+
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 
   /********** END OF YOUR CODE ***********/
 }
@@ -67,11 +68,13 @@ nav > div:hover a {
 #contents > article {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   /********** ADD YOUR CODE HERE ***********/
-  min-width: 50%;
+  
   display: flex;
   flex-direction: column;
   align-content: center;
-  padding: 4%;
+  min-width: 49.5%;
+  max-width: 49.5%;
+  align-self: center;
   
   
   /********** END OF YOUR CODE ***********/
@@ -123,7 +126,9 @@ flexbox property  order   and  :nth-child  */
   /********** ADD YOUR CODE HERE ***********/
   display: flex;
   flex-direction: column;
-  align-content: center;
+  width: 30%;
+  padding: 1.5%;
+  text-align: left;
   /********** END OF YOUR CODE ***********/
 }
 
@@ -135,7 +140,7 @@ flexbox property  order   and  :nth-child  */
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
+    /*justify-content: center;*/
   }
 
   #contents{
@@ -147,8 +152,13 @@ flexbox property  order   and  :nth-child  */
   }
 
   aside{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 97%;
+    max-width: 100%;
+    justify-content: center;
     align-content: center;
+    align-items: center;
   }
 
   article img{
