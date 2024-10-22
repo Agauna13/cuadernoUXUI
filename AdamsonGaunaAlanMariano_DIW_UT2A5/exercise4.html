@@ -12,6 +12,11 @@
       .wrapper {
         background-color: #fff;
         color: #444;
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(2, 200px);
+        gap: 2px;
+        position: relative;
       }
 
       .box {
@@ -27,6 +32,10 @@
         width: 200px;
         height: 200px;
         box-sizing: border-box;
+        z-index: 2;
+        margin-top: 100px;
+        margin-left: 100px;
+        position: absolute;
       }
     </style>
   </head>
