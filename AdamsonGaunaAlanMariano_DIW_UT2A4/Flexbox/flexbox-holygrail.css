@@ -72,8 +72,7 @@ nav > div:hover a {
   display: flex;
   flex-direction: column;
   align-content: center;
-  min-width: 49.5%;
-  max-width: 49.5%;
+  width: 49.5%;
   align-self: center;
   
   
@@ -140,15 +139,17 @@ flexbox property  order   and  :nth-child  */
     display: flex;
     flex-direction: column;
     align-content: center;
-    /*justify-content: center;*/
+    justify-content: center;
   }
 
   #contents{
-    width: 100%;
+    flex-direction: column;
+    min-width: 100%;
   }
 
   article{
-    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
   }
 
   aside{
