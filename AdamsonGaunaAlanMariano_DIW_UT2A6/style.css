@@ -3,6 +3,7 @@ body{
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 100vw;
+    gap: 1px;
 }
 
 
@@ -14,6 +15,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 0 2vw;
+    box-sizing: border-box;
     
 }
 /*
@@ -31,7 +33,9 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:90vh;
+    flex: 1;
+    min-height: calc(100vh - 7.7vh - 10vh);/*Calculamos el alto que debe ocupar el main para que nos pegue el footer abajo sin que haga scroll*/
+    
 }
 
 
@@ -48,7 +52,7 @@ main{
     height: 10vh;
     background-color: rgb(102, 173, 240);
     color: white;
-    border-radius: 10px;
+    border-radius: 6px;
     text-align: center;
     text-justify: center;
     font-size: larger;
@@ -56,16 +60,14 @@ main{
 
 footer{
     display: flex;
-    /*position: fixed;
-    bottom: 0;*/
-    top: 92vh;
     height: 8vh;
     background-color:#779eb2;
     color: white;
-    width: 100%;
+    width: 100vw;
     align-content: center;
     justify-content: center;
 }
+
 
 
 @media screen and (500px <= width <= 1000px) {
@@ -77,8 +79,12 @@ footer{
     }
 
     .card{
-        width: 20vw;
-        height: 10vh;
+        width: auto;
+    }
+
+    footer p{
+        text-align: center;
+        text-justify: center;
     }
 }
 
@@ -89,7 +95,8 @@ footer{
         align-content: center;
         align-items: center;
         justify-items: center;
-        height: 30vh;
+        height: auto;
+        padding: 3vh;
     }
 
     .menu{
