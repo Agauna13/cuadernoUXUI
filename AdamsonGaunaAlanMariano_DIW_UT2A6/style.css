@@ -18,9 +18,7 @@ nav{
     box-sizing: border-box;
     
 }
-/*
-Pendiende que el footer se pegue abajo, que el main ocupe lo que tiene que ocupar y centrar el nav
-*/
+
 .menu{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
