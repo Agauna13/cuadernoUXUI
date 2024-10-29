@@ -1,0 +1,18 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 30vh;
+  color: white;
+}
+.cards .card1 {
+  background-color: black;
+}
+.cards .card2 {
+  background-color: rgb(54, 53, 53);
+}
+.cards .card3 {
+  background-color: rgb(102, 101, 101);
+}
+.cards .card4 {
+  background-color: rgb(163, 162, 162);
+}/*# sourceMappingURL=style.css.map */
