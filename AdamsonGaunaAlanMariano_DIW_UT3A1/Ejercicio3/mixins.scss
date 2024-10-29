@@ -1,0 +1,7 @@
+@mixin redondez($redondez: 0%){
+    border-radius: $redondez;
+    border: 4px black;
+    min-width: 100px;
+    min-height: 100px;
+    display: block;
+}

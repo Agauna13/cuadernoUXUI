@@ -1,0 +1,30 @@
+@use 'mixins.scss';
+
+.avatares{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 20vh);
+    gap: 10%;
+    color: white;
+}
+
+
+.avatar1{
+    @include mixins.redondez;
+    background-color: black;
+}
+
+.avatar2{
+    @include mixins.redondez(10%);
+    background-color: rgb(44, 43, 43);
+}
+
+.avatar3{
+    @include mixins.redondez(20%);
+    background-color: rgb(79, 79, 79);
+}
+
+.avatar4{
+    @include mixins.redondez(30%);
+    background-color: rgb(166, 165, 165);
+}
