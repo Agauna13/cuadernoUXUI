@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 7vw;
+  height: 15vh;
+  background-color: rgb(224, 172, 98);
+}
+
+.name {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(255, 246, 207);
+  font-size: 3vh;
+}
+
+.role {
+  width: 100%;
+  font-size: 2vh;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: repeat(2, 7vw);
+  grid-template-columns: repeat(2, 15vh);
+  gap: 3%;
+}/*# sourceMappingURL=style.css.map */

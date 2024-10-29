@@ -1,0 +1,27 @@
+@use 'variables';
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: variables.$outer-w;
+    height: variables.$outer-h;
+    background-color: variables.$primary-color;
+}
+
+.name{
+    width: variables.$inner-w;
+    height: variables.$inner-h;
+    background-color: variables.$secondary-color;
+}
+
+.role{
+    width: variables.$inner-w;
+    height: variables.$inner-h;
+}
+
+.cards{
+    display: grid;
+    grid-template-rows: repeat(2, variables.$outer-w);
+    grid-template-columns: repeat(2, variables.$outer-h);
+    gap: 3%;
+}
