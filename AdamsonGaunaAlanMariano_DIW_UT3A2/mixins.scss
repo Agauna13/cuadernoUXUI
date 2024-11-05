@@ -1,0 +1,11 @@
+@mixin theme($theme: red){
+    box-shadow: rgba($theme, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+@mixin radius($radius: 50%){
+    border-radius: $radius;
+}
+%text-style{
+    text-shadow: #FC0 1px 0 10px;;
+    
+}

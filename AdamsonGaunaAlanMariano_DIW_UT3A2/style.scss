@@ -1,0 +1,64 @@
+@import 'variables';
+@import 'mixins';
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@function opacity($color, $fade) {
+    @if $fade > 0 {
+      @return lighten($color, $fade);
+    } @else {
+      @return darken($color, $fade * .2);
+    }
+  }
+
+@function screen($wide){
+    @if $wide == true {
+        @return 0 10px;
+    }@else{
+        @return 0 20px;
+    }
+}
+
+.profile-card{
+    @include theme;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: $card-width;
+    height: $card-height;
+    background-color:rgba($primary-color,0.5);
+    font-size: $subtitle-font-size;
+    box-sizing: border-box;
+   
+    
+    .name{
+        @extend %text-style;
+        color: $contrast-color;
+        font-size: $title-font-size;
+    }
+    .role{
+        @extend %text-style;
+    }
+}
+
+.avatar{
+    @include radius;
+    width: 20%;
+    height: 40%;
+    background-color: $contrast-color;
+}
+
+
+@media screen and (width >= 1200px) {
+    .profile-card {
+        padding: screen(false); 
+    }
+}
+@media screen and (width < 1200px) {
+    .profile-card {
+        text-align: screen(true);
+    }
+}
