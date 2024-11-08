@@ -1,0 +1,11 @@
+@import 'variables';
+
+
+@mixin estiloBotones($theme: $amarillo){
+    background-color: $theme;
+    font-weight: bold;
+    border: none;
+    border-radius: 1px;
+    box-sizing: border-box;
+    text-align: center;
+}

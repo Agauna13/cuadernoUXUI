@@ -1,17 +1,93 @@
-html, body {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 400px;
-  height: 650px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-button {
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0 2vw;
-  font-size: larger;
-  font-weight: bold;
+body {
+  margin: 0 auto;
+  width: 600px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.bot1 {
   background-color: #ecb300;
+  font-weight: bold;
   border: none;
+  border-radius: 1px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: larger;
+  box-sizing: border-box;
+  padding: 2vh;
+  width: 60%;
+}
+
+.portada {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  background-color: #ecb300;
+  color: white;
+  min-height: 60vh;
+  gap: 0;
+}
+
+.portada h1 {
+  color: white;
+  font-size: 10vw;
+}
+
+.portada h2 {
+  color: #ecb300;
+  font-size: 5vw;
+}
+
+.nurseImg {
+  background-image: url("./media/nurse.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.titulo, .nurseImg {
+  background-color: #41413f;
+  margin-top: 2vh;
+  padding: 0 2vw;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3vh 0;
+  box-sizing: border-box;
+  padding-left: 6vh;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 30% 1px 70%;
+  font-size: 0.6rem;
+}
+
+.corazon {
+  background-image: url("./media/logo-white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100%;
+}
+
+.texto {
+  text-justify: center;
+  margin-left: 6px;
+}
+
+.texto h2 {
+  font-size: 5vw;
+  color: white;
+}
+
+.linea {
+  background-color: #ecb300;
 }/*# sourceMappingURL=style.css.map */
