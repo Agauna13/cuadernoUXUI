@@ -1,0 +1,19 @@
+@import 'variables';
+
+html, body{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 400px;
+    height: 650px;
+}
+
+
+button{
+    height: fit-content;
+    padding: 0 2vw;
+    font-size: larger;
+    font-weight: bold;
+    background-color: $amarillo;
+    border: none;
+}
