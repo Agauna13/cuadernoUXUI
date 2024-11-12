@@ -92,7 +92,6 @@ body{
         @include estiloBotones;
         height: 6vh;
         width: 35%;
-        //font-size: 1.1rem;
 
     }
 
@@ -136,7 +135,8 @@ body{
             }
 
             .noteBook:hover{
-                transform: scale(1.2);
+                transform: rotate(360deg) scale(1.2);
+                transition: all 0.6s ease-in-out 0s;
             }
 
         }
@@ -151,7 +151,8 @@ body{
             }
 
             .reloj:hover{
-                transform: scale(1.2)
+                transform: rotate(360deg) scale(1.2);
+                transition: all 0.6s ease-in-out 0s;
             }  
 
             
@@ -167,7 +168,8 @@ body{
             }
 
             .firstAid:hover{
-                transform: scale(1.2);
+                transform: rotate(360deg) scale(1.2);
+                transition: all 0.6s ease-in-out 0s;
             }
         }
     }

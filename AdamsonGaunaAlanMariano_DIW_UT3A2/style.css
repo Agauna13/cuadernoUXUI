@@ -179,7 +179,8 @@ body {
   background-size: contain;
 }
 .standOut .tabla .uno .noteBook:hover {
-  transform: scale(1.2);
+  transform: rotate(360deg) scale(1.2);
+  transition: all 0.6s ease-in-out 0s;
 }
 .standOut .tabla .dos {
   display: grid;
@@ -214,7 +215,8 @@ body {
   background-size: contain;
 }
 .standOut .tabla .dos .reloj:hover {
-  transform: scale(1.2);
+  transform: rotate(360deg) scale(1.2);
+  transition: all 0.6s ease-in-out 0s;
 }
 .standOut .tabla .tres {
   display: grid;
@@ -249,7 +251,8 @@ body {
   background-size: contain;
 }
 .standOut .tabla .tres .firstAid:hover {
-  transform: scale(1.2);
+  transform: rotate(360deg) scale(1.2);
+  transition: all 0.6s ease-in-out 0s;
 }
 
 .ranked {
