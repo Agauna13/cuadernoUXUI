@@ -7,6 +7,7 @@
 body {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0 auto;
   width: 600px;
@@ -19,17 +20,45 @@ body {
   grid-template-columns: repeat(2, 50%);
   background-color: #ecb300;
   color: white;
-  min-height: 60vh;
+  height: 45vh;
   width: 100%;
-  gap: 0;
-}
-.portada h1 {
-  color: white;
-  font-size: 3rem;
-}
-.portada h2 {
-  color: #ecb300;
-  font-size: 2rem;
+  /*.logo{
+      @include logo;
+      display: grid;
+      grid-template-columns: 30% 1px 70%;
+      font-size: 0.6rem;
+
+      .corazon{
+          background-image: url('./media/logo-white.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          min-height: 100%;
+
+      }
+
+      hr{
+          transform: rotate(90);
+          width: 1px;
+          height: 90%;
+          align-self:center;
+          background-color: $amarillo;
+          border: none;
+
+      }
+
+      .texto{
+          text-justify: center;
+          margin-left: 0.5rem;
+      }
+      .texto h2{
+          font-size: $subtitulos;
+          color: white;
+      }
+      p{
+          text-justify: distribute;
+      }
+  }*/
 }
 .portada .nurseImg {
   background-image: url("./media/nurse.png");
@@ -48,6 +77,15 @@ body {
   box-sizing: border-box;
   padding-left: 6vh;
   gap: 2vh;
+  padding: 1rem;
+}
+.portada .titulo h1 {
+  color: white;
+  font-size: 3rem;
+}
+.portada .titulo h2 {
+  color: #ecb300;
+  font-size: 2rem;
 }
 .portada button {
   background-color: #ecb300;
@@ -55,14 +93,17 @@ body {
   border: none;
   border-radius: 1px;
   box-sizing: border-box;
+  font-size: larger;
   height: 2.7rem;
   width: 62%;
   font-size: 1.6rem;
 }
 .portada .logo {
+  color: white;
   display: grid;
   grid-template-columns: 30% 1px 70%;
   font-size: 0.6rem;
+  text-align: justify;
 }
 .portada .logo .corazon {
   background-image: url("./media/logo-white.svg");
@@ -81,7 +122,11 @@ body {
 }
 .portada .logo .texto {
   text-justify: center;
-  margin-left: 6px;
+  margin-left: 0.5rem;
+  color: white;
+}
+.portada .logo .texto h2 {
+  color: white;
 }
 .portada .logo .texto h2 {
   font-size: 2rem;
@@ -107,6 +152,7 @@ body {
   border: none;
   border-radius: 1px;
   box-sizing: border-box;
+  font-size: larger;
   height: 6vh;
   width: 35%;
   font-size: 1.1rem;
@@ -115,12 +161,13 @@ body {
   line-height: 1.8rem;
   color: #41413f;
   opacity: 0.7;
+  margin: 0 1rem;
 }
 
 .standOut {
   background-color: #ecb300;
   width: 100%;
-  height: 40vh;
+  height: 35vh;
 }
 .standOut h2 {
   background-color: #41413f;
@@ -128,32 +175,23 @@ body {
   font-weight: 100;
   text-align: center;
   align-self: center;
-  padding: 1.7vw;
+  padding: 1.2rem;
 }
 .standOut .tabla {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 30vh;
-  background-color: #fef5d6;
+  height: 79%;
+  border-bottom: 3px solid #ecb300;
 }
-.standOut .tabla .uno, .standOut .tabla .dos, .standOut .tabla .tres {
+.standOut .tabla .uno {
   display: grid;
   grid-template-rows: 50% 25% 25%;
   text-align: center;
-}
-.standOut .tabla .uno {
-  background-color: #f8dd7e;
-}
-.standOut .tabla .uno .noteBook {
-  height: 100%;
-  width: 100%;
-  background-image: URL("./media/notebook.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  padding: 0.8rem;
+  background-color: #fef5d6;
 }
 .standOut .tabla .uno h2 {
-  background-color: transparent;
+  background-color: inherit;
   color: #41413f;
   font-weight: bolder;
   font-size: 2.2rem;
@@ -162,21 +200,166 @@ body {
   text-align: center;
   color: #41413f;
   margin-bottom: 2vh;
+  font-size: 1.2rem;
 }
-.standOut .tabla .dos .reloj {
+.standOut .tabla .uno .noteBook {
   height: 100%;
   width: 100%;
-  background-image: URL("./media/reloj.svg");
+  background-image: url(./media/notebook.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 50%;
+}
+.standOut .tabla .dos {
+  display: grid;
+  grid-template-rows: 50% 25% 25%;
+  text-align: center;
+  padding: 0.8rem;
+  background-color: white;
 }
 .standOut .tabla .dos h2 {
-  background-color: transparent;
+  background-color: inherit;
   color: #41413f;
   font-weight: bolder;
   font-size: 2.2rem;
 }
+.standOut .tabla .dos p {
+  text-align: center;
+  color: #41413f;
+  margin-bottom: 2vh;
+  font-size: 1.2rem;
+}
+.standOut .tabla .dos .reloj {
+  height: 100%;
+  width: 100%;
+  background-image: url(./media/reloj.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
 .standOut .tabla .tres {
+  display: grid;
+  grid-template-rows: 50% 25% 25%;
+  text-align: center;
+  padding: 0.8rem;
+  background-color: #ffd642;
+}
+.standOut .tabla .tres h2 {
+  background-color: inherit;
+  color: #41413f;
+  font-weight: bolder;
+  font-size: 2.2rem;
+}
+.standOut .tabla .tres p {
+  text-align: center;
+  color: #41413f;
+  margin-bottom: 2vh;
+  font-size: 1.2rem;
+}
+.standOut .tabla .tres .firstAid {
+  height: 100%;
+  width: 100%;
+  background-image: url(./media/firstAid.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+.ranked {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: 40vh;
+}
+.ranked .texto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem;
+  line-height: 1.8rem;
+  color: #41413f;
+}
+.ranked button {
   background-color: #ecb300;
+  font-weight: bold;
+  border: none;
+  border-radius: 1px;
+  box-sizing: border-box;
+  font-size: larger;
+  width: 100%;
+  height: 2.3rem;
+}
+.ranked .paisaje {
+  background-image: url("./media/paisaje.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 1rem;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: 12vh;
+  background-color: #41413f;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+.footer .logo {
+  color: white;
+  display: grid;
+  grid-template-columns: 30% 1px 70%;
+  font-size: 0.6rem;
+  text-align: justify;
+}
+.footer .logo .corazon {
+  background-image: url("./media/logo-white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100%;
+}
+.footer .logo hr {
+  transform: rotate(90);
+  width: 1px;
+  height: 90%;
+  align-self: center;
+  background-color: #ecb300;
+  border: none;
+}
+.footer .logo .texto {
+  text-justify: center;
+  margin-left: 0.5rem;
+  color: white;
+}
+.footer .logo .texto h2 {
+  color: white;
+}
+.footer .logo .texto h2 {
+  font-size: 2rem;
+  color: white;
+}
+.footer .logo p {
+  text-justify: distribute;
+}
+.footer .direccion {
+  color: white;
+  text-align: center;
+  line-height: 2rem;
+}
+
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+  .titulo {
+    padding-left: 1rem;
+    gap: 1rem;
+  }
+  .tabla {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
 }/*# sourceMappingURL=style.css.map */
