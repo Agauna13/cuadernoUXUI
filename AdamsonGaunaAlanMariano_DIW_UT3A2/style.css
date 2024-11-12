@@ -5,22 +5,13 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   width: 600px;
+  height: auto;
   font-family: "Times New Roman", Times, serif;
-}
-
-.bot1 {
-  background-color: #ecb300;
-  font-weight: bold;
-  border: none;
-  border-radius: 1px;
-  box-sizing: border-box;
-  text-align: center;
-  font-size: larger;
-  box-sizing: border-box;
-  padding: 2vh;
-  width: 60%;
 }
 
 .portada {
@@ -29,65 +20,163 @@ body {
   background-color: #ecb300;
   color: white;
   min-height: 60vh;
+  width: 100%;
   gap: 0;
 }
-
 .portada h1 {
   color: white;
-  font-size: 10vw;
+  font-size: 3rem;
 }
-
 .portada h2 {
   color: #ecb300;
-  font-size: 5vw;
+  font-size: 2rem;
 }
-
-.nurseImg {
+.portada .nurseImg {
   background-image: url("./media/nurse.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
-
-.titulo, .nurseImg {
+.portada .titulo, .portada .nurseImg {
   background-color: #41413f;
   margin-top: 2vh;
-  padding: 0 2vw;
 }
-
-.titulo {
+.portada .titulo {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 3vh 0;
+  justify-content: space-evenly;
   box-sizing: border-box;
   padding-left: 6vh;
+  gap: 2vh;
 }
-
-.logo {
+.portada button {
+  background-color: #ecb300;
+  font-weight: bold;
+  border: none;
+  border-radius: 1px;
+  box-sizing: border-box;
+  height: 2.7rem;
+  width: 62%;
+  font-size: 1.6rem;
+}
+.portada .logo {
   display: grid;
   grid-template-columns: 30% 1px 70%;
   font-size: 0.6rem;
 }
-
-.corazon {
+.portada .logo .corazon {
   background-image: url("./media/logo-white.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100%;
 }
-
-.texto {
+.portada .logo hr {
+  transform: rotate(90);
+  width: 1px;
+  height: 90%;
+  align-self: center;
+  background-color: #ecb300;
+  border: none;
+}
+.portada .logo .texto {
   text-justify: center;
   margin-left: 6px;
 }
-
-.texto h2 {
-  font-size: 5vw;
+.portada .logo .texto h2 {
+  font-size: 2rem;
   color: white;
 }
+.portada .logo p {
+  text-justify: distribute;
+}
 
-.linea {
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 43vh;
+  text-align: center;
+  color: #41413f;
+  width: 95%;
+}
+.descripcion button {
+  background-color: #ecb300;
+  font-weight: bold;
+  border: none;
+  border-radius: 1px;
+  box-sizing: border-box;
+  height: 6vh;
+  width: 35%;
+  font-size: 1.1rem;
+}
+.descripcion p {
+  line-height: 1.8rem;
+  color: #41413f;
+  opacity: 0.7;
+}
+
+.standOut {
+  background-color: #ecb300;
+  width: 100%;
+  height: 40vh;
+}
+.standOut h2 {
+  background-color: #41413f;
+  color: #faf7ec;
+  font-weight: 100;
+  text-align: center;
+  align-self: center;
+  padding: 1.7vw;
+}
+.standOut .tabla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 30vh;
+  background-color: #fef5d6;
+}
+.standOut .tabla .uno, .standOut .tabla .dos, .standOut .tabla .tres {
+  display: grid;
+  grid-template-rows: 50% 25% 25%;
+  text-align: center;
+}
+.standOut .tabla .uno {
+  background-color: #f8dd7e;
+}
+.standOut .tabla .uno .noteBook {
+  height: 100%;
+  width: 100%;
+  background-image: URL("./media/notebook.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.standOut .tabla .uno h2 {
+  background-color: transparent;
+  color: #41413f;
+  font-weight: bolder;
+  font-size: 2.2rem;
+}
+.standOut .tabla .uno p {
+  text-align: center;
+  color: #41413f;
+  margin-bottom: 2vh;
+}
+.standOut .tabla .dos .reloj {
+  height: 100%;
+  width: 100%;
+  background-image: URL("./media/reloj.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.standOut .tabla .dos h2 {
+  background-color: transparent;
+  color: #41413f;
+  font-weight: bolder;
+  font-size: 2.2rem;
+}
+.standOut .tabla .tres {
   background-color: #ecb300;
 }/*# sourceMappingURL=style.css.map */

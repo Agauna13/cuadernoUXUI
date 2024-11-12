@@ -8,23 +8,19 @@
     box-sizing: border-box;
 }
 
-
- body{
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
     width: 600px;
+    height: auto;
     font-family: 'Times New Roman', Times, serif ;
 }
 
 
 
-.bot1{
-    @include estiloBotones;
-    font-size: larger;
-    box-sizing: border-box;
-    padding: 2vh;
-    width: 60%;
-    
-}
+
 
 .portada{
     display: grid;
@@ -32,73 +28,208 @@
     background-color: $amarillo;
     color: white;
     min-height: 60vh;
+    width: 100%;
     gap: 0;
+
+    h1{
+        color: white;
+        font-size: $titulos;
+    }
+
+    h2{
+        color: $amarillo;
+        font-size: $subtitulos;
+    }
+
+
+    .nurseImg{
+        background-image: url('./media/nurse.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+    }
+    
+    .titulo, .nurseImg{
+        background-color: $gris;
+        margin-top: 2vh;    
+    }
+
+    .titulo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+        padding-left: 6vh;
+        gap: 2vh;
+    }
+
+    button{
+        @include estiloBotones;
+        height: 2.7rem;
+        width: 62%;
+        font-size: 1.6rem;
+
+    }
+
+    .logo{
+        display: grid;
+        grid-template-columns: 30% 1px 70%;
+        font-size: 0.6rem;
+        
+        .corazon{
+            background-image: url('./media/logo-white.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100%;
+            
+        }
+    
+        hr{
+            transform: rotate(90);
+            width: 1px;
+            height: 90%;
+            align-self:center;
+            background-color: $amarillo;
+            border: none;
+            
+        }
+    
+        .texto{
+            text-justify: center;
+            margin-left: 6px;
+        }
+        .texto h2{
+            font-size: $subtitulos;
+            color: white;
+        }
+        p{
+            text-justify: distribute;
+        }
+    
+    
+    
+    }
+
+    
+
     
 }
 
-.portada h1{
-    color: white;
-    font-size: $titulos;
-}
-
-.portada h2{
-    color: $amarillo;
-    font-size: $subtitulos;
-}
-
-
-
-.nurseImg{
-    background-image: url('./media/nurse.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    
-}
-
-.titulo, .nurseImg{
-    background-color: $gris;
-    margin-top: 2vh;    
-    padding: 0 2vw;
-}
-
-.titulo{
+.descripcion{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 3vh 0;
-    box-sizing: border-box;
-    padding-left: 6vh;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 43vh;
+    text-align: center;
+    color: $gris;
+    width: 95%;
+
+    button{
+        @include estiloBotones;
+        height: 6vh;
+        width: 35%;
+        font-size: 1.1rem;
+
+    }
+
+    p{
+        line-height: 1.8rem;
+        color: $gris;
+        opacity: 0.7;
+    }
 }
 
 
+.standOut{
+    background-color: $amarillo;
+    width: 100%;
+    height: 40vh;
 
-.logo{
-    display: grid;
-    grid-template-columns: 30% 1px 70%;
-    font-size: 0.6rem;    
-}
 
-.corazon{
-    background-image: url('./media/logo-white.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100%;
+    h2{
+        background-color: $gris;
+        color: $blancoCremita;
+        font-weight: 100;
+        text-align: center;
+        align-self: center;
+        padding: 1.7vw;
+    }
+
+
+    .tabla{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        height: 30vh;
+        background-color: $amarilloMuyClarito;
+
+
+        .uno, .dos, .tres{
+            display: grid;
+            grid-template-rows: 50% 25% 25%;
+            text-align: center;
+        }
+
+               
+        .uno{ 
+            background-color: $amarilloNoTanClarito;
+
+
+            .noteBook{
+                height: 100%;
+                width: 100%;
+                background-image: URL('./media/notebook.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                
+            }
+
+            h2{
+                background-color: transparent;
+                color: $gris;
+                font-weight: bolder;
+                font-size: 2.2rem;
+            }
+
+            p{
+                text-align: center;
+                color: $gris;
+                margin-bottom: 2vh;
+            }
+
+            
+            
+        }
+
+        .dos{
+
+            .reloj{
+                height: 100%;
+                width: 100%;
+                background-image: URL('./media/reloj.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            h2{
+                background-color: transparent;
+                color: $gris;
+                font-weight: bolder;
+                font-size: 2.2rem;
+            }
+            
+        }
+
+        .tres{
+            background-color: $amarillo;
+        }
+
+        
+    }
     
 }
-
-.texto{
-    text-justify: center;
-    margin-left: 6px;
-}
-.texto h2{
-    font-size: $subtitulos;
-    color: white;
-}
-
-.linea{
-    background-color: $amarillo;
-}
-
-
