@@ -12,15 +12,15 @@
 
 @mixin estiloColumnas($fondo: $amarillo){
     display: grid;
-    grid-template-rows: 50% 25% 25%;
+    grid-template-rows: 60% 20% 20%;
     text-align: center;
     padding: 0.8rem;
 
     h2{
-        background-color: inherit;
+        background-color: transparent;
         color: $gris;
         font-weight: bolder;
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     p{
@@ -37,7 +37,7 @@
     background-image: url(#{$imagen});
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: contain;
 }
 
 @mixin logo($img: './media/logo-white.svg'){
