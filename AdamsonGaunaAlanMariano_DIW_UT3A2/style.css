@@ -130,9 +130,8 @@ body {
 }
 
 .standOut {
-  background-color: #ecb300;
   width: 100%;
-  height: 40vh;
+  height: auto;
 }
 .standOut h2 {
   background-color: #41413f;
@@ -145,27 +144,31 @@ body {
 .standOut .tabla {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 79%;
-  border-bottom: 3px solid #ecb300;
+  height: auto;
 }
 .standOut .tabla .uno {
   display: grid;
   grid-template-rows: 60% 20% 20%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   text-align: center;
+  gap: 4%;
   padding: 0.8rem;
+  border-bottom: 4px solid #ecb300;
+  padding: 1.3rem;
+  box-sizing: border-box;
   background-color: #fef5d6;
 }
 .standOut .tabla .uno h2 {
   background-color: transparent;
   color: #41413f;
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .standOut .tabla .uno p {
   text-align: center;
   color: #41413f;
-  margin-bottom: 2vh;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .standOut .tabla .uno .noteBook {
   height: 100%;
@@ -175,24 +178,32 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.standOut .tabla .uno .noteBook:hover {
+  transform: scale(1.2);
+}
 .standOut .tabla .dos {
   display: grid;
   grid-template-rows: 60% 20% 20%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   text-align: center;
+  gap: 4%;
   padding: 0.8rem;
+  border-bottom: 4px solid #ecb300;
+  padding: 1.3rem;
+  box-sizing: border-box;
   background-color: white;
 }
 .standOut .tabla .dos h2 {
   background-color: transparent;
   color: #41413f;
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .standOut .tabla .dos p {
   text-align: center;
   color: #41413f;
-  margin-bottom: 2vh;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .standOut .tabla .dos .reloj {
   height: 100%;
@@ -202,24 +213,32 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.standOut .tabla .dos .reloj:hover {
+  transform: scale(1.2);
+}
 .standOut .tabla .tres {
   display: grid;
   grid-template-rows: 60% 20% 20%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   text-align: center;
+  gap: 4%;
   padding: 0.8rem;
+  border-bottom: 4px solid #ecb300;
+  padding: 1.3rem;
+  box-sizing: border-box;
   background-color: #ffd642;
 }
 .standOut .tabla .tres h2 {
   background-color: transparent;
   color: #41413f;
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .standOut .tabla .tres p {
   text-align: center;
   color: #41413f;
-  margin-bottom: 2vh;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .standOut .tabla .tres .firstAid {
   height: 100%;
@@ -228,6 +247,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+.standOut .tabla .tres .firstAid:hover {
+  transform: scale(1.2);
 }
 
 .ranked {
@@ -316,7 +338,16 @@ body {
   line-height: 1.7rem;
 }
 
+button:hover {
+  transform: scale(1.2);
+  border-radius: 5px;
+  color: white;
+}
+
 @media (max-width: 500px) {
+  body {
+    gap: 3%;
+  }
   h1, h2 {
     font-size: 1.6rem;
   }
@@ -334,6 +365,7 @@ body {
     height: -moz-fit-content;
     height: fit-content;
     border-bottom: 2px solid #ecb300;
+    height: auto;
   }
   .standOut .tabla {
     display: flex;
@@ -342,16 +374,28 @@ body {
     grid-template-rows: repeat(3, fit-content);
     height: auto;
   }
-  .standOut .uno, .standOut .dos, .standOut .tres {
+  .standOut .tabla .uno, .standOut .tabla .dos, .standOut .tabla .tres {
     gap: 6%;
-    height: 40vh;
+    height: auto;
   }
+}
+@media only screen and (max-width: 500px) and (max-width: 500px) {
+  .standOut .tabla .uno h2, .standOut .tabla .dos h2, .standOut .tabla .tres h2 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 500px) and (max-width: 500px) {
+  .standOut .tabla .uno p, .standOut .tabla .dos p, .standOut .tabla .tres p {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 500px) {
   .ranked {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
     align-items: center;
-    min-height: 100vh;
+    height: auto;
   }
   .ranked .paisaje {
     height: 50vh;

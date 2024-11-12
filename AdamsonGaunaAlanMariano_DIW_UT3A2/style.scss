@@ -16,9 +16,10 @@ body{
     margin: 0 auto;
     width: 600px;
     height: auto;
-    font-family: 'Times New Roman', Times, serif ;
-    
+    font-family: 'Times New Roman', Times, serif ;    
 }
+
+
 
 .portada{
     display: grid;
@@ -105,9 +106,8 @@ body{
 
 
 .standOut{
-    background-color: $amarillo;
     width: 100%;
-    height: 40vh;
+    height: auto;
     
     h2{
         background-color: $gris;
@@ -122,10 +122,8 @@ body{
     .tabla{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        height: 79%;
-        border-bottom: 3px solid $amarillo;
+        height: auto;
         
-
 
         .uno{
             @include estiloColumnas;
@@ -136,6 +134,11 @@ body{
                 @include fondoSvg;
                 
             }
+
+            .noteBook:hover{
+                transform: scale(1.2);
+            }
+
         }
 
         .dos{
@@ -144,7 +147,12 @@ body{
             
             .reloj{
                 @include fondoSvg('./media/reloj.svg');
+                
             }
+
+            .reloj:hover{
+                transform: scale(1.2)
+            }  
 
             
         }
@@ -155,11 +163,17 @@ body{
 
             .firstAid{
                 @include fondoSvg('./media/firstAid.svg');
+                
+            }
+
+            .firstAid:hover{
+                transform: scale(1.2);
             }
         }
     }
     
 }
+
 
 .ranked{
     display: grid;
@@ -214,8 +228,18 @@ body{
 
 }
 
+button:hover{
+    transform: scale(1.2);
+    border-radius: 5px;
+    color: white;
+
+}
+
 
 @media (max-width: 500px) {
+    body{
+        gap: 3%;
+    }
     h1, h2 {
         font-size: 1.6rem;
     }
@@ -236,16 +260,32 @@ body{
     .standOut{
         height: fit-content;
         border-bottom: 2px solid $amarillo;
+        height: auto;
+
         .tabla {    
             display: flex;
             flex-direction: column;
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(3, fit-content);
             height: auto;
-        }
-        .uno, .dos, .tres{
-            gap: 6%;
-            height: 40vh;
+            
+    
+            .uno, .dos, .tres{
+                gap: 6%;
+                height: auto;
+
+                h2{
+                    @include dispositivosPortatiles{
+                        font-size: 3rem;
+                    }
+                    
+                }
+                p{
+                    @include dispositivosPortatiles{
+                        font-size: 1.7rem;
+                    }
+                }
+            }
         }
 
     }
@@ -255,7 +295,7 @@ body{
         flex-direction: column-reverse;
         text-align: center;
         align-items: center;
-        min-height: 100vh;
+        height: auto;
         
         .paisaje{
             height: 50vh;
