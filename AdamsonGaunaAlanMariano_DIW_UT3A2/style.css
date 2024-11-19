@@ -180,7 +180,7 @@ body {
 }
 .standOut .tabla .uno .noteBook:hover {
   transform: rotate(360deg) scale(1.2);
-  transition: all 0.6s ease-in-out 0s;
+  transition: all 0.9s ease-in-out 0s;
 }
 .standOut .tabla .dos {
   display: grid;
