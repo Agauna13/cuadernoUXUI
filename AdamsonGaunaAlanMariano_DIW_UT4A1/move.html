@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: relative;
+        }
+
+        
+        .move-left {
+            animation: move-left 5s linear;
+        }
+
+
+        /*Siempre será igual, se moverá desde la esquina superior izquierda a la derecha*/
+        @keyframes move-left {
+            from {
+                transform: translate(0,0);
+            }
+
+            to {
+                transform: translate(500px, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="square move-left"></div>
+    
+</body>
+</html>

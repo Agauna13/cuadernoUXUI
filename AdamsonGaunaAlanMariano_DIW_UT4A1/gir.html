@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: relative;
+        }
+
+        
+        .gir {
+            animation: spin 2s linear infinite;
+        }
+
+
+        /*Siempre será igual, se moverá desde la esquina superior izquierda a la derecha*/
+        @keyframes spin {
+            /*Siempre comienza en un punto*/
+            from {
+                transform: rotate(0deg);
+            }
+            /*Y termina en otro*/
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="square gir"></div>
+    
+</body>
+</html>

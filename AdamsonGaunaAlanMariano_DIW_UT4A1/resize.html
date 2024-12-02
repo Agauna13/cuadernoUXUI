@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: relative;
+        }
+        
+        .mida {
+            animation: resize 2s ease-in-out infinite;
+        }
+
+        /*Siempre será igual, se moverá desde la esquina superior izquierda a la derecha*/
+        @keyframes resize {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="square mida"></div>
+    
+</body>
+</html>

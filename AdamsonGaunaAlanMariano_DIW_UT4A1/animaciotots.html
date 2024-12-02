@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .quadrat {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: moureICanviarMida;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-delay: 1s;
+            /*Información original: 2*/
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes moureICanviarMida {
+            from {
+                transform: translate(0%,0%) scale(1);
+            }
+
+            to {
+                transform: translate(100%, 100%) scale(2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrat"></div>
+</body>
+</html>
