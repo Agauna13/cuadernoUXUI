@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css"/>
     <title>Document</title>
 
     <style>
-        .square {
-            width: 100px;
-            height: 100px;
-            background-color: pink;
-            position: relative;
+      .square {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+      }
+
+      .move-left {
+        animation: move-left 5s linear infinite;
+      }
+
+      @keyframes move-left {
+        from {
+          transform: translate(0, 0);
+          opacity: 0;
         }
 
-        
-        .move-left {
-            animation: move-left 5s linear;
+        to {
+          transform: translate(500px, 0);
+          background-color: black;
+          opacity: 1;
         }
-
-
-        /*Siempre será igual, se moverá desde la esquina superior izquierda a la derecha*/
-        @keyframes move-left {
-            from {
-                transform: translate(0,0);
-            }
-
-            to {
-                transform: translate(500px, 0);
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <div class="dashboard">
+        <button><a href="gir.html">Giros</a></button>
+        <button><a href="move.html">Move</a></button>
+        <button><a href="resize.html">Resize</a></button>
+        <button><a href="animaciotots.html">All animations</a></button>
+        <button><a href="animaciotot2.html">All animations again</a></button>
+      </div>
+    </header>
 
-    <div class="square move-left"></div>
-    
-</body>
+    <div class="square move-left">
+    </div>
+  </body>
 </html>

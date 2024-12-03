@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Document</title>
 
     <style>
-        * {
-            margin: 0 auto;
-        }
- 
-        @keyframes moureICanviar {
-            from {
-                transform: translateX(0%) scale(1) rotate(0deg);
-                background-color: blue;
-            }
 
-            50% {
-                transform: translateX(100%) scale(1.5) rotate(180deg);
-                background-color: yellow;
-            }
-            to {
-                transform: translateX(-100%) scale(1) rotate(360deg);
-                background-color: blue;
-            }
+      @keyframes moureICanviar {
+        from {
+          transform: translateX(0%) scale(1) rotate(0deg);
+          background-color: white;
         }
 
-        @keyframes girar {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
+        50% {
+          transform: translateX(100%) scale(1.5) rotate(180deg);
+          background-color: gray;
         }
-
-        .cercle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: blue;
-            animation-name: moureICanviar;
-            animation-duration: 3s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
+        to {
+          transform: translateX(-100%) scale(1) rotate(360deg);
+          background-color: black;
         }
+      }
 
-        .rectangle {
-            width: 150px;
-            height: 50px;
-            background-color: green;
-            animation-name: girar;
-            animation-duration: 3s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            animation-direction: alternate-reverse;
+      @keyframes girar {
+        from {
+          transform: rotate(0deg);
+          background-color: white;
         }
+        to {
+          transform: rotate(360deg);
+          background-color: yellow;
+        }
+      }
 
+      .cercle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: blue;
+        animation-name: moureICanviar;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .rectangle {
+        width: 150px;
+        height: 50px;
+        background-color: yellow;
+        animation-name: girar;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <div class="dashboard">
+        <button><a href="gir.html">Giros</a></button>
+        <button><a href="move.html">Move</a></button>
+        <button><a href="resize.html">Resize</a></button>
+        <button><a href="animaciotots.html">All animations</a></button>
+        <button><a href="index.html">INICIO</a></button>
+      </div>
+    </header>
+
     <div class="cercle"></div>
     <div class="rectangle"></div>
-</body>
+  </body>
 </html>

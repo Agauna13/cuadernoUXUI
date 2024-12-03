@@ -3,36 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 
     <style>
         .quadrat {
             width: 100px;
             height: 100px;
-            background-color: red;
             position: relative;
-            animation-name: moureICanviarMida;
+            animation-name: moveAndResize;
             animation-duration: 2s;
-            animation-timing-function: ease-in;
             animation-delay: 1s;
-            /*Información original: 2*/
+            animation-timing-function: ease-in;
             animation-iteration-count: infinite;
             animation-direction: alternate;
             animation-fill-mode: backwards;
         }
 
-        @keyframes moureICanviarMida {
+        @keyframes moveAndResize {
             from {
                 transform: translate(0%,0%) scale(1);
+                background-color: black;
             }
 
             to {
                 transform: translate(100%, 100%) scale(2);
+                background-color: yellow;
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="dashboard">
+            <button><a href="gir.html">Giros</a></button>
+            <button><a href="move.html">Move</a></button>
+            <button><a href="resize.html">Resize</a></button>
+            <button><a href="animaciotot2.html">All animations again</a></button>
+            <button><a href="index.html">INICIO</a></button>
+          </div>
+    </header>
+
+
     <div class="quadrat"></div>
 </body>
 </html>

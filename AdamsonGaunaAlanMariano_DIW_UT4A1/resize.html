@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 
     <style>
-        .square {
+        .squareResize {
             width: 100px;
             height: 100px;
-            background-color: pink;
+            background-color: white;
             position: relative;
         }
         
@@ -17,7 +18,7 @@
             animation: resize 2s ease-in-out infinite;
         }
 
-        /*Siempre será igual, se moverá desde la esquina superior izquierda a la derecha*/
+
         @keyframes resize {
             from {
                 transform: scale(1);
@@ -25,13 +26,23 @@
 
             to {
                 transform: scale(1.5);
+                background-color: black;
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="dashboard">
+            <button><a href="gir.html">Giros</a></button>
+            <button><a href="move.html">Move</a></button>
+            <button><a href="animaciotots.html">All animations</a></button>
+            <button><a href="animaciotot2.html">All animations again</a></button>
+            <button><a href="index.html">INICIO</a></button>
+          </div>
+    </header>
 
-    <div class="square mida"></div>
+    <div class="squareResize mida"></div>
     
 </body>
 </html>

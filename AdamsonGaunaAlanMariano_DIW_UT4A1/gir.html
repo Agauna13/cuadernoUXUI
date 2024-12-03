@@ -3,38 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 
     <style>
-        .square {
+        .squareSpin {
             width: 100px;
             height: 100px;
-            background-color: pink;
             position: relative;
         }
+
 
         
         .gir {
             animation: spin 2s linear infinite;
         }
 
-
-        /*Siempre será igual, se moverá desde la esquina superior izquierda a la derecha*/
         @keyframes spin {
-            /*Siempre comienza en un punto*/
             from {
                 transform: rotate(0deg);
+                background-color: white;
             }
-            /*Y termina en otro*/
-            to {
+            50% {
                 transform: rotate(360deg);
+                background-color: yellow;
+
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="square gir"></div>
+    <header>
+        <div class="dashboard">
+            <button><a href="move.html">Move</a></button>
+            <button><a href="resize.html">Resize</a></button>
+            <button><a href="animaciotots.html">All animations</a></button>
+            <button><a href="animaciotot2.html">All animations again</a></button>
+            <button><a href="index.html">INICIO</a></button>
+          </div>
+    </header>
+
+    <div class="squareSpin gir">
+    </div>
     
 </body>
 </html>
