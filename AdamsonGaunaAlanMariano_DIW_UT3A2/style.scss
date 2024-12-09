@@ -16,7 +16,7 @@ body{
     margin: 0 auto;
     width: 600px;
     height: auto;
-    font-family: 'Times New Roman', Times, serif ;    
+    font-family: 'Times New Roman', Times, serif ;
 }
 
 
@@ -72,7 +72,6 @@ body{
     .logo{
         @include logo;
     }
-   
 }
 
 .descripcion{
@@ -153,7 +152,7 @@ body{
             .reloj:hover{
                 transform: rotate(360deg) scale(1.2);
                 transition: all 0.6s ease-in-out 0s;
-            }  
+            }
 
             
         }

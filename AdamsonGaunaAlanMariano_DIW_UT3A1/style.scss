@@ -32,7 +32,6 @@ body{
     background-color:rgba($primary-color,0.5);
     font-size: $subtitle-font-size;
     box-sizing: border-box;
-   
     
     .name{
         @extend %text-style;
