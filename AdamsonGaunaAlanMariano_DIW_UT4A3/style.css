@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "kanit";
+  src: url("./fonts/Kanit/Kanit-Regular.ttf");
+}
+body {
+  max-width: 100vw;
+  height: 300vh;
+  font-family: "kanit";
+  background-image: url("./media/universe.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+  background-color: white;
+  font-weight: bold;
+  font-size: large;
+}
+nav h3 {
+  cursor: pointer;
+}
+
+.portada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 100vw;
+  background-color: rgba(116, 172, 223, 0.6);
+}
+.portada .info {
+  border: 3px solid white;
+  color: white;
+  padding: 1rem 3rem;
+  text-align: center;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.portada .info hr {
+  border: 2px solid white;
+  opacity: 1;
+}
+
+main {
+  background-color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100vw;
+}
+main #developer {
+  background-image: url("./media/codigo-fuente.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.espacio {
+  height: 5vh;
+  width: 100vh;
+  background-color: none;
+}/*# sourceMappingURL=style.css.map */

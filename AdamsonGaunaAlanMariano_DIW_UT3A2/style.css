@@ -283,7 +283,7 @@ body {
 .ranked .paisaje {
   background-image: url("./media/paisaje.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   margin: 1rem;
 }
