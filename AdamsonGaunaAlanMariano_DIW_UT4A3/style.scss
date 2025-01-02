@@ -1,68 +1,192 @@
-@import '_variables';
-
+@import "_variables.scss";
+@import "_mixins.scss";
 
 body{
-    max-width: 100vw;
-    height: 300vh;
-    font-family: $main-font;
-    background-image: url('./media/universe.webp');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
-    overflow-x: hidden;
+  font-family: 'Kanit', sans-serif;
+  overflow-x: hidden;
 }
 
-nav{
-    width: 100%;
-    background-color: white;
-    font-weight: bold;
-    font-size: large;
+.heroSection{
+  background-image: url('./media/fondoHeader.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-    h3{
-        cursor: pointer;
+.nombre{
+  @include text-shadow($color: $dark, $x: 3px, $y: 3px, $blur: 4px);
+  font-size: 5rem;
+}
+
+.logo{
+  width: 100px;
+  height: 100px;
+}
+
+.welcome {
+  @include text-shadow($color: rgba(0, 0, 0, 0.5), $x: 2px, $y: 2px, $blur: 4px);
+}
+
+.specialty{
+  @include text-shadow($color:  rgba(0, 0, 0, 0.2), $x: 2px, $y: 2px, $blur: 2px);
+}
+
+
+a{
+  text-decoration: none;
+}
+
+.callToAction{
+  @include text-shadow($color: $dark, $x: 2px, $y: 2px, $blur: 4px);
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: $secondary;
+  transition: all 0.3s;
+  &:hover{
+    background-color: $contrast-color;
+    color: $light;
+  }
+}
+
+.nav-link{
+  color: $dark;
+  transition: all 0.3s;
+  &:hover{
+    color: $contrast-color;
+    @include text-shadow($color: $contrast-color, $x: 2px, $y: 2px, $blur: 4px);
+  }
+}
+
+
+.card{
+  border: 3px solid $light;
+  overflow: hidden;
+  .btn{
+    background-color: $primary;
+    &:hover{
+      background-color: $contrast-color;
+      color: $light;
     }
-}
+  }
 
-.portada{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
-    width: 100vw;
-    background-color: rgba(116, 172, 223, 0.6);
-    .info{
-        border: 3px solid white;
-        color: white;
-        padding: 1rem 3rem;
-        text-align: center;
-        font-weight: bold;
-        box-sizing: border-box;
-        hr{
-            border: 2px solid white;
-            opacity: 1;
-        }
+  &:hover{
+    .card-img{
+      position: relative;
+      animation: slideInDown 0.5s ease-in forwards;
+      
     }
-}
-
-
-main{
-    background-color: white;
-    height: fit-content;
-    width: 100vw;
-
-
-    #developer{
-        background-image: url('./media/codigo-fuente.webp');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100%;
+    .card-body{
+      animation: slideInUp 0.5s ease-in forwards;
     }
+  }
+  
 }
 
-.espacio{
-    height: 5vh;
-    width: 100vh;
-    background-color: none;
+.gradient-basic {
+  background: linear-gradient(to right, #6b7aff, #0228ff);
+}
+
+.gradient-interm {
+  background: linear-gradient(to right, #0228ff, #424242);
+}
+
+.gradient-adv {
+  background: linear-gradient(to right, #424242, #000000);
+}
+
+
+
+
+.falling-image {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+  #about:hover & {
+    animation: slideInRight 1.5s ease-out forwards;
+  }
+}
+
+.welcome{
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.5s ease;
+  animation: slideInRight 1.5s ease-out forwards;
+
+}
+
+.name{
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: slideInLeft 1.5s ease-out forwards;
+}
+
+
+
+
+
+.progress-bar {
+  width: 0; // Estado inicial de las barras
+  transition: width 2s ease-in-out;
+  animation: none; // Por defecto sin animación
+  animation-fill-mode: forwards;
+}
+
+// Animación al hacer hover en la sección
+#habilidades:hover .progress-bar {
+  animation: progressAnimation 2s ease-in-out forwards;
+  
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width); // Variable para cada barra
+  }
 }

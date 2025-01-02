@@ -1,10 +1,21 @@
-@font-face {
-    font-family: 'kanit';
-    src: url('./fonts/Kanit/Kanit-Regular.ttf');
-}
+// Importar las variables de Bootstrap
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$main-font: 'kanit';
+// Reasignación de variables de Bootstrap
+$primary: #001F3F;
+$secondary: #FFFFFF;
+$warning: #ffcc00;
+$light: #F5F5F5;
+$success: #2ECC71;
+$text-light: #FFD700;
 
-$paragraph-size: 0.7rem;
+// Personalización de otros colores si es necesario
+$body-bg: $light;
+$body-color: $dark;
+$contrast-color: rgb(22, 61, 255);
 
-$title-size: 1.3rem;
+// Importar el resto de Bootstrap para aplicar los cambios
+//@import "bootstrap/scss/bootstrap";
