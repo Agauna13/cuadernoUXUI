@@ -9,7 +9,7 @@ $primary: #001F3F;
 $secondary: #FFFFFF;
 $warning: #ffcc00;
 $light: #F5F5F5;
-$success: #2ECC71;
+$success:  rgb(22, 61, 255);
 $text-light: #FFD700;
 
 // Personalización de otros colores si es necesario
@@ -17,5 +17,4 @@ $body-bg: $light;
 $body-color: $dark;
 $contrast-color: rgb(22, 61, 255);
 
-// Importar el resto de Bootstrap para aplicar los cambios
 //@import "bootstrap/scss/bootstrap";
