@@ -1,10 +1,9 @@
-@import "_variables.scss";
+@import "_variables.scss"; //variables con los colores para usar en el proyecto
 @import "_mixins.scss";
 
-/* General Styles */
+/* Estilos generales*/
 body {
-  font-family: 'Kanit', sans-serif;
-  //overflow-x: hidden;
+  font-family: 'Kanit', sans-serif; //fuente Gracias a google fonts
   margin-inline: 0;
 }
 
@@ -23,6 +22,7 @@ body {
 
     &:hover {
       color: $contrast-color;
+      //Mixin par aplicar diferentes sombras, no lo he utilizado muchisimo. en este caso para aplicar un pequeño brillo azul a los elementos del nav
       @include text-shadow($color: $contrast-color, $x: 2px, $y: 2px, $blur: 4px);
     }
   }
@@ -39,7 +39,7 @@ body {
   display: flex;
   align-items: center;
 
-  &:hover {
+  &:hover { //hover para dar profundidad al fondo del hero section
     background-size: 150%;
     transition: all ease-in 0.5s;
   }
@@ -47,12 +47,12 @@ body {
   .name {
     @include text-shadow($color: $dark, $x: 3px, $y: 3px, $blur: 4px);
     font-size: 5rem;
-    animation: slideInLeft 1.5s ease-out forwards;
+    animation: slideInLeft 1.5s ease-out forwards; //llamamos a la animación que nos trae el nombre desde la izquierda
   }
 
   .welcome {
-    @include text-shadow($color: rgba(0, 0, 0, 0.5), $x: 2px, $y: 2px, $blur: 4px);
-    animation: slideInRight 1.5s ease-out forwards;
+    @include text-shadow($color: $dark, $x: 2px, $y: 2px, $blur: 4px);
+    animation: slideInRight 1.5s ease-out forwards; //llamamos a la animación que nos trae el welcome desde la derecha
   }
 
   .callToAction {
@@ -64,24 +64,25 @@ body {
     transition: all 0.3s;
 
     &:hover {
+      //color de contraste al hacer hover en el botón, en este caso un azul que combina con el resto de la paleta de colores
       background-color: $contrast-color;
       color: $light;
     }
   }
 }
 
-/* About Me Section */
+// About Me Section
 .falling-image {
-  background-color: rgba($color: #ffffff, $alpha: 0.6);
+  background-color: rgba($color: #ffffff, $alpha: 0.6); //pequeño fondo para dar contraste a la imagen
   border-radius: 50%;
-  transform: translateX(100%);
   transition: all 0.5s ease;
   animation: slideInRight 1.5s ease-out forwards;
   
 }
 
-/* Cards */
-
+/*Seccion se proyectos. 3 cartas hechas con bootstrap. Al igual que en la sección
+de las barras de progreso, he optado por un hover para aplicar el efecto que con
+js sería disparado al entrar en esa sección */
 .card {
   box-sizing: border-box;
   border: 3px solid $light;
@@ -100,9 +101,7 @@ body {
   }
 
   &:hover {
-
     .card-img {
-      position: relative;
       animation: slideInDown 0.5s ease-in forwards;
     }
 
@@ -112,9 +111,10 @@ body {
   }
 }
 
-/* Skills Section */
+/* Sección de barras de progreso, he optado por un gradiente desde el color de contraste
+a un negro total para expresar el 'grado de conocimiento'*/
 .progress {
-  background-color: transparent;
+  background-color: transparent; //sin color de fondo para un efecto curioso
 
   .progress-bar {
     width: 0;
@@ -140,7 +140,13 @@ body {
 
 }
 
-/* Contact Section */
+
+//Sombreado a titulos para mejor contraste
+h4, h2, h1{
+  @include text-shadow($color: $dark, $x: 2px, $y: 2px, $blur: 4px);
+}
+
+/* Sección de contacto */
 .formContainer {
   background-image: url('./media/fondoHeader.png');
   background-position: center;
@@ -153,13 +159,16 @@ body {
   }
 
   .form-control {
-    &:focus {
+    &:focus { //el input en el que se está escribiendo se resaltará escalando un 20%
       transform: scale(1.2);
+      border: solid #0228ff;
     }
   }
 }
 
-/* Footer */
+/* Footer. Único estilo que tuve que aplicar fue un color azulado al icono de linkedin
+y un hover para animar una pequeña rotación y escala*/
+
 .footerIcon {
   &:hover {
     transform: rotate(360deg) scale(1.2);
@@ -167,7 +176,7 @@ body {
   }
 }
 
-/* Animations */
+// Animaciones
 @keyframes slideInRight {
   from {
     transform: translateX(100%);

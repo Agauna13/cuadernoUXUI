@@ -11,18 +11,19 @@
     <title>Alan Adamson</title>
 </head>
 
-<body class="bg-warning body-color text-primary">
-    <nav class="navbar navbar-expand-lg" >
+<body class="bg-warning body-color text-primary"><!--Establecemos un color de fondo para todo el body, llamativo para romper con la norma actual de colores oscuros o pastel-->
+    <nav class="navbar navbar-expand-lg"> <!--Creamos un nav que se expande totalmente en tamaños de pantalla grandes -->
         <div class="container-fluid text-center">
-            <a class="navbar-brand text-dark fw-bold" href="#"><img class="logo" src="./media/logo.png" alt="Logo"></a>
+            <a class="navbar-brand text-dark fw-bold" href="#"><img class="logo" src="./media/logo.png" alt="Logo"></a> <!--a lo largo de todo el proyecto podemos ver las clases text o bg-dark para usar la paleta de colores de bootstrap-->
+
+            <!--De la documentación de bootstrap, este menú responsive se convertirá en un botón que despliega un menu oculto en dispositivos medianos y pequeños-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link fw-bold fs-5" href="#about">About Me</a>
+                        <a class="nav-link fw-bold fs-5" href="#about">About Me</a><!--Enlaces a las diferentes secciones de la página-->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bold fs-5" href="#myWork">My Work</a>
@@ -39,15 +40,19 @@
     </nav>
 
     <!-- Hero Section -->
+
+    <!--En esta sección he optado por un nombre grande y llamativo en un color de contraste con el amarillo del fondo.
+    Tanto el nombre como el mensaje de bienvenida se desplazan desde los costados para encontrarse en el medio,
+    para captar aún más la atención del usuario.
+    El fondo, a falta de un patrón que me gustase, fue diseñado por mi mismo en canva, al igual que el logo de la barra de navegación.
+    Los fondos y efectos aplicados en iconos, e imágenes fueron gracias a gimp-->
     <header class="text-white">
         <div class="container heroSection">
-            <div class="row text-xs-center">
-                <!-- Contenido alineado a la izquierda -->
+            <div class="row text-xs-center text-sm-center">
                 <div class="col-md-6 text-xs-center text-sm-center text-md-start text-lg-start name">
-                    <h1 class="display-4 text-dark fw-bolder nombre ">Alan Adamson</h1>
+                    <h1 class="display-4 text-dark fw-bolder nombre">Alan Adamson</h1>
                     <p class="lead text-light fw-bold specialty ">Web Developer (eventually)</p>
                 </div>
-                <!-- Bienvenida a la derecha -->
                 <div class="col-md-6 text-end text-xs-center text-sm-center text-md-center text-lg-end welcome py-3">
                     <p class="lead text-light fw-bold">Welcome to my web portfolio! Here you will find my
                         projects, skills, and more about me.</p>
@@ -58,6 +63,7 @@
     </header>
 
     <main>
+        <!--Sección con una introducción un poco más detallada y una foto que al cargar la página aparece desde la derecha-->
         <section class="py-5">
             <div class="container" id="about">
                 <div class="row align-items-center">
@@ -93,13 +99,13 @@
                         </p>
                     </div>
                     <div class="col-lg-5 text-center falling-image">
-                        <img src="./media/shoIntensito.png" alt="Developer" class="img-fluid rounded">
+                        <img src="./media/shoIntensito.png" alt="Developer" class="img-fluid rounded"><!--Única foto decente que tenía-->
                     </div>
                 </div>
             </div>
         </section>
 
-
+        <!--Galería con las tarjetas Mostrando los únicos 3 proyectos que más o menos puedo enseñar a día de hoy con sus enlaces a GitHub. Imágenes cortesía de chatGPT-->
         <section class="py-5 bg-dark">
             <div class="container" id="myWork">
                 <div class="row">
@@ -164,17 +170,15 @@
         </section>
         
 
-
+        <!--Sección con barras de progreso personalizadas y animadas para cargarse. Tuve que solucionar la animación con un hover ya que sin javascript no he encontrado manera
+        de hacer que se dispare la animación al pasar por esa sección.-->
         <section id="skills" class="body-color py-5">
             <div class="container text-dark">
                 <h2 class="text-start mb-4">My Skills</h2>
-
-
-                <!-- HTML Skill -->
                 <div class="mb-3">
-                    <label class="form-label text-light fw-bolder specialty">HTML</label>
+                    <h4 class="text-light fw-bolder specialty">HTML</h4>
                     <p>After my education as a web developer, since HTML is the most used markup language in web
-                        developement, I took the chance to learn it to heart and made it part of my DNA</p>
+                        developement, I took the chance to learn it and made it part of my DNA.</p>
                     <div class="progress mx-auto" style="width: 50%;">
                         <div class="progress-bar gradient-basic" style="--target-width: 30%;">Basic</div>
                         <div class="progress-bar gradient-interm" style="--target-width: 30%;">Intermediate</div>
@@ -183,10 +187,9 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label text-light fw-bolder specialty">CSS/SASS</label>
+                    <h4 class="text-light fw-bolder specialty">CSS/SASS</h4>
                     <p>One can not claim to be passionate in web developement design without mastering the intrincate
-                        ways
-                        of CSS and its frameworks like Bootstrap.</p>
+                        ways of CSS and its frameworks like Bootstrap.</p>
                     <div class="progress mx-auto" style="width: 50%;">
                         <div class="progress-bar gradient-basic" style="--target-width: 30%;">Basic</div>
                         <div class="progress-bar gradient-interm" style="--target-width: 30%;">Intermediate</div>
@@ -196,9 +199,9 @@
 
 
                 <div class="mb-3">
-                    <label class="form-label text-light fw-bolder specialty">JavaScript</label>
+                    <h4 class="text-light fw-bolder specialty">JavaScript</h4>
                     <p>Even if not used for this particular project, when looking through my projects you will encounter
-                        some of the skills I was able to learn so far</p>
+                        some of the skills I was able to learn so far.</p>
                     <div class="progress mx-auto" style="width: 50%;">
                         <div class="progress-bar gradient-basic" style="--target-width: 30%;">Basic</div>
                         <div class="progress-bar gradient-interm" style="--target-width: 30%;">Intermediate</div>
@@ -207,7 +210,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label text-light fw-bolder specialty">PHP</label>
+                    <h4 class="text-light fw-bolder specialty">PHP</h4>
                     <p>Widely used server language, I've only just begun to learn it. You can find my first steps on my github.</p>
                     <div class="progress mx-auto" style="width: 50%;">
                         <div class="progress-bar gradient-basic" style="--target-width: 30%;">Basic</div>
@@ -219,6 +222,9 @@
             </div>
         </section>
 
+
+
+        <!--Formulario sencillo de contacto. Al no haber persistencia de datos, no he implementado código para manejo de datos. -->
         <section class="py-5 formContainer" id="contact">
             <div class="container slideContainer">
                 <div class="row">
@@ -247,13 +253,14 @@
         </section>
     </main>
 
-    <!--Footer-->
-    <footer class="bg-dark text-white text-center py-4">
+    <!--Footer con enlaces a la página principal de github y linkedin como relleno ya que a día de hoy no dispongo de una cuenta en linkedin
+    los iconos utilizados son de una librería de bootstrap que podemos usar mediante este enlace https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css
+    aplicado en la linea 8 de éste html-->
+    <footer class="bg-dark text-white text-center py-3">
         <div class="container">
-            <p class="mb-4">You can also reach me on other platforms</p>
+            <p class="mb-4 text-start">You can also reach me on other platforms</p>
 
             <div class="row justify-content-center">
-                <!-- GitHub -->
                 <div class="col-6 col-md-3 mb-3 footerIcon">
                     <a href="https://github.com/Agauna13" class="text-decoration-none text-white">
                         <div class="d-flex flex-column align-items-center">
@@ -263,7 +270,6 @@
                     </a>
                 </div>
 
-                <!-- LinkedIn -->
                 <div class="col-6 col-md-3 mb-3 footerIcon">
                     <a href="https://linkedin.com" class="text-decoration-none text-white">
                         <div class="d-flex flex-column align-items-center">
@@ -274,14 +280,14 @@
                 </div>
             </div>
 
-            <p class="mt-4 mb-0">&copy; 2024 Alan Adamson. All rights reserved.</p>
+            <p class="mt-4 mb-0 text-end">&copy; 2024 Alan Adamson. All rights reserved.</p>
         </div>
     </footer>
 
 
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-3gFj4xJDVNmWB8Dsx+Y6FYD3CGtdxfJZfCkJwRm30zViOAHgSLZ3ck4Xh98sJD+6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
 
 </body>
